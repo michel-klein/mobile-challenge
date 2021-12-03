@@ -9,7 +9,7 @@ import 'person.dart';
 class PersonList with ChangeNotifier {
   List<Person> _items = [];
   List<Person> _cacheItems = [];
-  static const String _url = 'https://randomuser.me/api/?results=2';
+  static const String _url = 'https://randomuser.me/api/?results=50';
 
   int get personCount {
     return _cacheItems.length;
@@ -35,6 +35,24 @@ class PersonList with ChangeNotifier {
     }
 
     _cacheItems = [...listGender];
+
+    notifyListeners();
+  }
+
+  void filterCountry(String country) {
+    List<Person> personCountry = [];
+    final filterPerson =
+        _items.where((person) => person.country == country).toList();
+
+    if (filterPerson.isNotEmpty) {
+      personCountry = [...filterPerson];
+    }
+
+    if (country.isEmpty) {
+      _cacheItems = [..._items];
+    } else {
+      _cacheItems = [...personCountry];
+    }
 
     notifyListeners();
   }

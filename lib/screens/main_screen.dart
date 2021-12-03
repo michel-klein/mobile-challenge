@@ -13,6 +13,13 @@ class mainScreen extends StatefulWidget {
 
 class _mainScreenState extends State<mainScreen> {
   bool _isLoading = true;
+  final _countryController = TextEditingController();
+
+  _submitForm() {
+    final country = _countryController.text;   
+
+    Provider.of<PersonList>(context, listen: false).filterCountry(country);
+  }
 
   @override
   void initState() {
@@ -29,7 +36,7 @@ class _mainScreenState extends State<mainScreen> {
     return Scaffold(
         backgroundColor: Theme.of(context).colorScheme.background,
         appBar: AppBar(
-          title: Text('Pessoas Cadastradas'),
+          title: Text('Pessoas Cadastradas | Pharma Inc.'),
         ),
         body: LayoutBuilder(
           builder: (ctx, constraints) {
@@ -50,7 +57,20 @@ class _mainScreenState extends State<mainScreen> {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Text('Filtro'),
+                                Expanded(
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: TextField(
+                                      controller: _countryController,
+                                      onSubmitted: (_) => _submitForm(),
+                                      decoration: InputDecoration(
+                                        labelText: 'Country search',
+                                        suffixIcon: Icon(Icons.person_search_sharp),
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ),
+                                  ),
+                                ),
                                 IconButton(
                                   onPressed: () {
                                     showDialog(

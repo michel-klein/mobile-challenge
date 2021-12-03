@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
             error: Color(0XFFF26522),
           ),
         ),
-          home: mainScreen(),
+          home: firstScreen(),
           debugShowCheckedModeBanner: false,
         ),
       );

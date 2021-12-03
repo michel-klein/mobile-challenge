@@ -2,7 +2,7 @@
 
 ## Introdução
 
-Este é um desafio para testar seus conhecimentos de Mobile;
+Este é o aplicativo desenvolvido como solução ao  desafio para testar seus conhecimentos de Mobile;
 
 O objetivo é avaliar a sua forma de estruturação e autonomia em decisões para construir algo escalável utilizando um framework moderno.
 
