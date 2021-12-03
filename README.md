@@ -1,5 +1,9 @@
 # Usuários Pharma Inc.
 
+<img src="images/Screenshot_1.png" width="200">
+
+[<img src="image.png" width="250"/>](images/Screenshot_2.png)
+
 ## Introdução
 
 Este é o aplicativo desenvolvido como solução ao Mobile Challenge 2021 da Coodesh, e é constituído por um consumo de API de dados de usuários. A interface exibe uma lista de usuários, e apresenta a opção de carregamento de mais usuários em um botão ao final da lista. Ao clicar em um usuário, é apresentada uma lista com suas características detalhadas. Também há opções de filtrar os usuários por país e por gênero.
