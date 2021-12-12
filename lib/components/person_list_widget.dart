@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:mobile_challenge/models/filter_gender.dart';
 import 'package:mobile_challenge/models/person.dart';
 import 'package:mobile_challenge/models/person_list.dart';
 import 'package:mobile_challenge/models/state_gender.dart';
 import 'package:mobile_challenge/screens/details_screen.dart';
 import 'package:provider/provider.dart';
-import 'package:collection/collection.dart';
+
 
 class PersonListWidget extends StatelessWidget {
   // final bool filterGender;
@@ -18,7 +17,6 @@ class PersonListWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final genderSelection = Provider.of<StateGender>(context);
-    print(genderSelection.stateGender.filterFemale.toString() + genderSelection.stateGender.filterMale.toString());
     final provider = Provider.of<PersonList>(context);
     final List<Person> loadedPerson = provider.items;
 

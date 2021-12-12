@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:mobile_challenge/models/filter_gender.dart';
 import 'package:mobile_challenge/models/person_list.dart';
 import 'package:mobile_challenge/screens/first_screen.dart';
-import 'package:mobile_challenge/screens/main_screen.dart';
 import 'package:provider/provider.dart';
-
 import 'models/state_gender.dart';
 
 void main() {
